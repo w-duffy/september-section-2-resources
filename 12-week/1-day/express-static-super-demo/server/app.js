@@ -6,7 +6,14 @@ app.use('/css', express.static('assets/css'));
 app.use('/pics', express.static('assets/images'));
 app.use('/js', express.static('assets/scripts'));
 
-app.use(express.static('./'));
+
+app.get('/spots', (req, res) => {
+res.json({"Spots": ["Disney World", "Spot 2", "Spot 3"]});
+})
+
+// app.use(express.static('./'));
+
+
 
 const port = 5000;
 app.listen(port, () => console.log('Server is listening on port', port));
