@@ -11,8 +11,7 @@
 
 ## Thursday
 
-- PA and How it Relates to the M4 Project
-- Morning lecture on app security
+- Security
 - JWT Practices
 - Continue working on Auth Me
 - Sequelize Scopes EoD
@@ -30,6 +29,7 @@
 
 ## Next Week
 
+- Introduce Mocha Specs, GH Action, and scorecard
 - (Recap) How to use Postman, and how to apply the results to your scorecard.
 - Work on projects all week until you're passing.
 
@@ -40,9 +40,9 @@
 
 ## Project Due Date
 
-- Beginning of class on 9/30.
-- I will be grading on 9/30.
+- Beginning of class on 12/30.
+- I will be grading on 12/30.
 
 ## Spare Time ⭐
 - Work on your job search workbook.
-- Complete the Mod 4 portion before 9/30
+- Complete the Mod 4 portion before 12/30
