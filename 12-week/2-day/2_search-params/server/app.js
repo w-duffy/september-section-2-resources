@@ -13,6 +13,8 @@ const { Op } = require('sequelize');
 // Express using json - DO NOT MODIFY
 app.use(express.json());
 
+
+// http://localhost:5000/musicians?bandName=The%20Falling%20Box
 app.get('/musicians', async (req, res, next) => {
     const {
         firstName,
@@ -123,12 +125,12 @@ app.get('/musicians', async (req, res, next) => {
     // exists. Do not include any attributes from the join table
     // MusicianInstruments.
     // End result:
-    /* { 
-        include: [{ 
-            model: Instrument, 
-            where: { type: req.query.instrumentTypes }, 
+    /* {
+        include: [{
+            model: Instrument,
+            where: { type: req.query.instrumentTypes },
             through: { attributes: [] } // Omits the join table attributes
-        }] } 
+        }] }
     */
 
     if (instrumentTypes && Array.isArray(instrumentTypes)) {
@@ -203,7 +205,8 @@ app.get('/musicians', async (req, res, next) => {
     }
 
     // Perform compiled query
-    const musicians = await Musician.findAndCountAll(query);
+    console.log("Query", query)
+    const musicians = await Musician.findAndCountAll({query});
 
     res.json(musicians);
 });

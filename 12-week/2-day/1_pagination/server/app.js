@@ -12,70 +12,78 @@ const { Musician, Band, Instrument } = require('./db/models');
 // ADVANCED BONUS: Reduce Pagination Repetition
 const paginator =
     ({ defaultPage = 1, defaultSize = 5 }) =>
-    (req, res, next) => {
-        let { page, size } = req.query;
+        (req, res, next) => {
+            let { page, size } = req.query;
 
-        page = Number(page);
-        size = Number(size);
+            page = Number(page);
+            size = Number(size);
 
-        if (isNaN(page)) page = defaultPage;
-        if (isNaN(size)) size = defaultSize;
+            if (isNaN(page)) page = defaultPage;
+            if (isNaN(size)) size = defaultSize;
 
-        const pagination = {};
+            const pagination = {};
 
-        if (page !== 0 && size !== 0) {
-            pagination.limit = size;
-            pagination.offset = size * (page - 1);
-        }
+            if (page !== 0 && size !== 0) {
+                pagination.limit = size;
+                pagination.offset = size * (page - 1);
+            }
 
-        req.pagination = pagination;
+            req.pagination = pagination;
 
-        next();
-    };
+            next();
+        };
 
 // Express using json - DO NOT MODIFY
 app.use(express.json());
 
-app.get('/musicians', paginator({}), async (req, res, next) => {
-    // Parse the query params, set default values, and create appropriate
-    // offset and limit values if necessary.
-    // let { page, size } = req.query;
+// app.get('/musicians', paginator({}), async (req, res, next) => {
+app.get('/musicians', async (req, res, next) => {
 
-    // page = Number(page);
-    // size = Number(size);
+    let { page, size } = req.query;
 
-    // if (isNaN(page)) page = 1;
-    // if (isNaN(size)) size = 5;
+    // console.log("~~~~~~~~~~~~~~~")
+    // console.log(page, size)
+    // console.log(typeof page, typeof size)
+    // console.log("~~~~~~~~~~~~~~~")
 
-    // let limit;
-    // let offset;
+    page = Number(page);
+    size = Number(size);
 
-    // if (page !== 0 && size !== 0) {
-    //     limit = size;
-    //     offset = size * (page - 1);
-    // }
+    if (isNaN(page)) page = 1;
+    if (isNaN(size)) size = 5;
 
-    // Query for all musicians
-    // Include attributes for `id`, `firstName`, and `lastName`
-    // Include associated bands and their `id` and `name`
-    // Order by musician `lastName` then `firstName`
+    let limit;
+    let offset;
+
+    if (page !== 0 && size !== 0) {
+        limit = size;
+        offset = size * (page - 1);
+    }
+
     const musicians = await Musician.findAll({
-        order: [['lastName'], ['firstName']],
-        attributes: ['id', 'firstName', 'lastName'],
-        include: [
-            {
-                model: Band,
-                attributes: ['id', 'name'],
-            },
-        ],
-        // add limit key-value to query
-        // add offset key-value to query
-        // limit,
-        // offset,
-        ...req.pagination,
+        limit,
+        offset,
     });
 
-    res.json(musicians);
+    // console.log(musicians[0].toJSON())
+    res.json({ Musicians: musicians})
+
+    // const musicians = await Musician.findAll({
+    //     order: [['lastName'], ['firstName']],
+    //     attributes: ['id', 'firstName', 'lastName'],
+    //     include: [
+    //         {
+    //             model: Band,
+    //             attributes: ['id', 'name'],
+    //         },
+    //     ],
+    //     // add limit key-value to query
+    //     // add offset key-value to query
+    //     limit,
+    //     offset,
+    //     // ...req.pagination,
+    // });
+
 });
 
 // BONUS: Pagination with bands
