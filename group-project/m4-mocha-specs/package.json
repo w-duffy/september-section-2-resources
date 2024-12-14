@@ -1,0 +1,21 @@
+{
+    "name": "mod-4-project-mocha-tests",
+    "version": "1.0.0",
+    "description": "## Comprehensive Testing Suite for the M4 API Project",
+    "type": "module",
+    "scripts": {
+        "test": "mocha ./tests/**/*.test.mjs",
+        "test-auth": "mocha './tests/01-auth/**/*.test.mjs'",
+        "test-spots": "mocha './tests/02-spots/**/*.test.mjs'",
+        "test-reviews": "mocha './tests/03-reviews/**/*.test.mjs'",
+        "test-images": "mocha './tests/04-delete-images-q-params/**/*.test.mjs'"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "chai": "^5.1.0",
+        "mocha": "^10.4.0",
+        "supertest": "^7.0.0"
+    }
+}
