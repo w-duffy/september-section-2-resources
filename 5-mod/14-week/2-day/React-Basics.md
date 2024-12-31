@@ -280,8 +280,8 @@ const roleName = 'Instructor';
 
 const MarchStaff = () => {
   return (
-    <MyComponent name="Zaviar" role={roleName} />;
-    <MyComponent name="Ricky" role="Assistant Instructor" />;
+    <MyComponent name="Will" role={roleName} />;
+    <MyComponent name="Maica" role="Learning Assistant" />;
   )
 }
 ```
