@@ -12,9 +12,9 @@ import './BaseStats.css';
 //     clicker,
 // }) {
 
-export default function BaseStats(taco) {
-    const { hp, attack, defense, speed } = taco.stats;
-    const clicker = taco.clicker;
+export default function BaseStats(props) {
+    const { hp, attack, defense, speed } = props.stats;
+    const clicker = props.clicker;
     //* Do all destructuring at once!
     return (
         <div className="base-stats">
