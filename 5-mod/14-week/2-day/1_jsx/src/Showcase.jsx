@@ -28,7 +28,7 @@ export default function Showcase() {
     );
 }
 
-export const myOtherComp = () => <div></div>;
+
 
 // const Showcase = () => {
 //     return (
