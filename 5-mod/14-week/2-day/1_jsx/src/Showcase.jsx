@@ -1,5 +1,25 @@
 import BulbaPic from './images/bulbasaur.jpg';
 
+//fetch('/api/spots/{spotId}')
+// {Spot: {spotName: 'Spot 1', spotImage: Spot1, spotDescription: 'This is a spot description'}}
+function NewComponent(){
+    return (
+        <h1>Hello World</h1>
+    )
+}
+
+function MoonComponent(){
+    return (
+        <h1>Hello Moon</h1>
+    )
+}
+
+function helloPerson(name){
+    return `Hello ${name}`
+}
+console.log(helloPerson('Will'))
+
+
 export default function Showcase() {
     const favPokemon = 'Bulbasaur';
 
@@ -10,8 +30,9 @@ export default function Showcase() {
 
     return (
         <div>
-            <h1>{`${favPokemon}'s Showcase Component`}</h1>
-            {console.log("HERE!")}
+            <NewComponent someProp="someValue" />
+            <MoonComponent />
+            {console.log("I'm in showcase.jsx")}
             {/* <h1>{favPokemon}&apos;s Showcase Component</h1> */}
             <img src={BulbaPic} alt={favPokemon} width={300}/>
             <h2>
