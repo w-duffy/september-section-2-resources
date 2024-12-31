@@ -249,7 +249,7 @@ Props are properties you want your component to have access to. This is just lik
 // --------------Vanilla JS Example--------------
 
 const userData = {
-  name: "Zaviar",
+  name: "Will",
   role: "Instructor",
 };
 
@@ -257,7 +257,7 @@ const myFunc = (props) => {
   return props.name + ` is an ${props.role}`;
 };
 
-console.log(myFunc(userData)); // 'Zaviar is an Instructor'
+console.log(myFunc(userData)); // 'Will is an Instructor'
 
 // --------------React Component Example--------------
 
