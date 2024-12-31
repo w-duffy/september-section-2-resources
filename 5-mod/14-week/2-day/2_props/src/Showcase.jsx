@@ -1,8 +1,10 @@
 import bulbasaur from './images/bulbasaur.jpg';
 import './Showcase.css';
 
-const Showcase = () => {
-  const favPokemon = 'Bulbasaur';
+
+
+const Showcase = ({pokemonName}) => {
+  const favPokemon = pokemonName;
 
   const pokeCharacteristics = {
     type: 'Grass',

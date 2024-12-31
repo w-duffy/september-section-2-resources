@@ -7,15 +7,17 @@ import './BaseStats.css';
 // export default function BaseStats({ stats, clicker }) { //! destructure props
 //     const { hp, attack, defense, speed } = stats; //! then destructure stats
 
-// export default function BaseStats({
-//     stats: { hp, attack, defense, speed },
-//     clicker,
-// }) {
 
-export default function BaseStats(props) {
-    const { hp, attack, defense, speed } = props.stats;
-    const clicker = props.clicker;
+// export default function BaseStats(props) {
+    //     const { hp, attack, defense, speed } = props.stats;
+    //     const clicker = props.clicker;
     //* Do all destructuring at once!
+
+
+    export default function BaseStats({
+        stats: { hp, attack, defense, speed },
+        clicker,
+    }) {
     return (
         <div className="base-stats">
             <h1>Base Stats</h1>
