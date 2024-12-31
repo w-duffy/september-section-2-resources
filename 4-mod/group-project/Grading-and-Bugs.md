@@ -25,4 +25,4 @@ When all of your mocha specs are passsing, you can submit your project and have 
 
 3. Debugging failing mocha specs.
   - You can console.log in your route handlers, and then run the tests to see what's going on.
-  - You can also add console.logs directly inside of the test suite.  Here are a couple of threads where a team resolved mocha specs that they weren't originally passing:
+  - You can also add console.logs directly inside of the test suite.  
