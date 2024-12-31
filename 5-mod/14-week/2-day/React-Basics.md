@@ -246,7 +246,7 @@ Props are properties you want your component to have access to. This is just lik
 `props` is an object, and you access its values like you would a normal object.
 
 ```jsx
-// --------------Vanilla JS Example--------------
+// --------------Vanilla JS Example--------------~
 
 const userData = {
   name: "Will",
