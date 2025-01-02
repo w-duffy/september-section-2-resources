@@ -17,10 +17,7 @@ const Cat = () => {
   const [status, setStatus] = useState("");
   // setDelay(1)
 
-  // when does a useEffect run?
-  // 1. after the initial render
-  // 2. on every render
-  // 3. on every render after a dependency changes
+
   useEffect(() => {
     console.log("useEffect ran");
   });
