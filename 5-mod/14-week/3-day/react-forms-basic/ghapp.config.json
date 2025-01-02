@@ -1,0 +1,19 @@
+{
+  "programs": {
+    "BASE": {
+      "starter-exclusions": [
+        "public/",
+        "src/",
+        ".eslintrc.cjs",
+        ".gitignore",
+        "index.html",
+        "package.json",
+        "package-lock.json",
+        "vite.config.js"
+      ]
+    },
+    "CH": true, 
+    "FT": true, 
+    "PT": true  
+  }
+}
