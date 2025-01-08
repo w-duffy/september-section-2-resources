@@ -55,7 +55,16 @@ export const articleSelector = createSelector(
 //! --------------------------------------------------------------------
 //?                              Thunks
 //! --------------------------------------------------------------------
+function normalizeShape(arr){
+  let obj = {}
+  console.log("normal", arr)
 
+  arr.forEach(el => {
+    obj[el.id] = el
+  })
+
+  return obj
+}
 export const loadArticlesThunk = () => async (dispatch, getState) => {
   const res = await fetch("/api/articles");
 
@@ -64,7 +73,8 @@ export const loadArticlesThunk = () => async (dispatch, getState) => {
   if (res.ok) {
     const articles = await res.json();
 
-    dispatch(loadArticles(normalizer(articles)));
+    // dispatch(loadArticles(normalizer(articles)));
+    dispatch(loadArticles(normalizeShape(articles)));
     return null;
   } else {
     const errors = await res.json();
@@ -82,6 +92,9 @@ export const addArticleErrors = (payload) => {
 
 
 
+
+
+
 export const addArticleThunk = (articleFormData) => async (dispatch) => {
   const res = await fetch("/api/articles", {
     method: "POST",
@@ -96,6 +109,9 @@ export const addArticleThunk = (articleFormData) => async (dispatch) => {
   if (res.ok) {
     const newArticle = await res.json();
     dispatch(addArticle(normalizer([newArticle])));
+
+
+    // dispatch(addArticle(normalizer([newArticle])));
     return {message: "success"};
   } else {
     const errors = await res.json()
@@ -104,6 +120,8 @@ export const addArticleThunk = (articleFormData) => async (dispatch) => {
     return errors;
   }
 };
+
+
 
 //! --------------------------------------------------------------------
 //*                              Reducer
@@ -126,10 +144,6 @@ const initialState = { entries: {}, isLoading: true, errors: [] };
 const articleReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_ARTICLES:
-      // iterate in here over payload to add to entries
-      // or handle this in the Thunk Action
-    // console.log(state.entries !== newState.entries )
-
       return { ...state, entries: { ...action.payload } };
     case ADD_ARTICLE:
       return { ...state, entries: { ...state.entries, ...action.payload }, errors: [] };

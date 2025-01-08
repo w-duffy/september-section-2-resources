@@ -6,8 +6,55 @@ import { addArticleThunk } from '../../store/articleReducer';
 import { useSelector } from 'react-redux';
 import './ArticleInput.css';
 
+import { createSelector } from "reselect";
+
+  const articleErrorSelector = state =>{
+    console.log("inside error use selector ~~~~~💃")
+   return state.articleState.errors
+  }
+
+
+const myMemoizedErrorSelector = createSelector(
+  [articleErrorSelector],
+  errors => errors.map(error => error.message == "hello")
+)
+
+
+
+
+// const articleErrorSelectorMemoized = createSelector(
+//   [articleErrorSelector],
+//   errors => errors
+// )
+
+
+
+// const errors = useSelector(articleErrorSelectorMemoized)
+
+
+// let myFunc = (state) => state.articleState.errors
+
 const ArticleInput = () => {
-  const errors = useSelector((state) => state.articleState.errors)
+// if oldState !== newState then re-render
+// const errors = useSelector(state => state.articleState.errors)
+
+const errors = useSelector(myMemoizedErrorSelector)
+
+// const errors = useSelector(state =>{
+//   console.log("inside error use selector ~~~~~💃")
+//  return state.articleState.errors
+// }
+// )
+
+
+  // const errors = useSelector(state =>{
+  //   console.log("inside error use selector ~~~~~💃")
+  //  return state.articleState.errors
+  // } )
+
+
+
+
  console.log("\nin article input component\n", errors)
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
@@ -15,7 +62,7 @@ const ArticleInput = () => {
   // let navigate = useNavigate()
 
   const dispatch = useDispatch();
-console.log("im in the article input")
+// console.log("im in the article input")
 
 
   const handleSubmit = async (e) => {

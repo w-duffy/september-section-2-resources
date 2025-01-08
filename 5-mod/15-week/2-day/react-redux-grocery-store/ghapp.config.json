@@ -1,0 +1,12 @@
+{
+  "programs": {
+    "BASE": {
+      "starter-exclusions": [
+        "src/store/"
+      ]
+    },
+    "CH": true, 
+    "FT": true, 
+    "PT": true
+  }
+}

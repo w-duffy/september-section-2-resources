@@ -4,17 +4,13 @@ import './SingleArticle.css';
 
 const SingleArticle = () => {
   const { id } = useParams();
-  // const singleArticle = useSelector(
-    // state => state.articleState.entries.find(article => article.id === id)
-  // )
-  const singleArticle = useSelector((state) => state.articleState.entries[id]);
-
-  //{"Spots": [{spotId: 1, name: "hi"}, {spotId: 2, name: "bye"}] } /// RIGHT NOW
+console.log("In single article")
+  const singleArticle = useSelector(state => 
+    state.articleState.entries.find(article => article.id === id)
+  )
 
 
-  // {1: {spotId: 1, name: "hi"}, 2: {spotId: 2, name: "bye"}}
-
-
+// if(singleArticle === undefined) return <LoadingSpinner />
 
   return (
     <div className='singleArticle'>
@@ -29,6 +25,5 @@ const SingleArticle = () => {
     </div>
   );
 };
-
 
 export default SingleArticle;
