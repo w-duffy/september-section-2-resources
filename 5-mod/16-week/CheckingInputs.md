@@ -1,5 +1,5 @@
 # Client Side Form Validation Cheat Sheet
-@Student Hi all, here is a quick guide is to help you avoid a common bug: when a user enters an invalid input while editing or creating, the create or update action fails without providing any feedback to the user.
+Here is a quick guide is to help you avoid a common bug: when a user enters an invalid input while editing or creating, the create or update action fails without providing any feedback to the user.
 
 To prevent this issue, ensure that *every* frontend input includes some form of validations, such as:
 - Minimum and maximum length

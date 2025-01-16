@@ -12,6 +12,8 @@ Thoroughly search your codebase to find **every** input field. Ensure each input
 *   **String Length:** Implement reasonable maximum and minimum length validations for text fields.
 *   **Required Fields:** Prevent submission of required fields with blank or null values.
 
+See the [Client Side Form Validation Cheat Sheet](CheckingInputs.md) for more details.
+
 ## 2. End-to-End Testing as a New User
 
 Perform a complete test of each feature from the perspective of a **newly** signed-up user. Follow these steps:
