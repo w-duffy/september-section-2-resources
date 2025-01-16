@@ -5,7 +5,7 @@ After working through the scorecard, completing the [Before Submitting](BeforeSu
 ## How to Submit the Project
 Update your scorecard and DM me confirming that you've:
 1. Completed the "Before Submitting" checklist.
-2. Checked every input in your app.
+2. Checked every input in your app, ensuring that every input has appropriate validations.
 3. **Provided** a Link to your Scorecard; please ensure I have editor access to your scorecard.
 
 Once your project has been submitted, I will review it and enter grades **next** Tuesday.
