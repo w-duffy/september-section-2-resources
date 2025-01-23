@@ -1,3 +1,41 @@
+
+# make a comment
+
+"""
+some comment
+
+"""
+print("did it break?")
+
+# # def hello_world():
+# #     print("hello world")
+# #     return "hello world"
+
+# # print(hello_world())
+
+# some_var = []
+
+# if (some_var):
+#     print("did i print?\n")
+
+# some_variable = "some variable value"
+
+
+# def hello_world():
+#     return "Cool"
+
+my_list = [1,2,3]
+
+new_list = [el for el in my_list]
+
+# for el in my_list:
+#     new_list.append(el)
+
+print(new_list)
+
+
+
+
 # # # print (2 == '2')    # => False
 
 # # # x = [1,2,3]
