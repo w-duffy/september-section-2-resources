@@ -1,6 +1,25 @@
 # # ## Classes
-# # class Animal:
-# #     pass
+class Animal:
+    def __init__(self, sound, name):
+        self.sound = sound
+        self.name = name
+
+    def some_func(self):
+        print("some method on dogs")
+        return "not none"
+
+
+class Dog(Animal):
+    def __init__(self, name):
+        self.sound = "woof"
+        self.name = name
+
+    def some_func(self):
+        print("some method on dogs")
+        return "not none"
+
+
+
 
 # # class AnimalMixin:
 # #     # utitlity methods
