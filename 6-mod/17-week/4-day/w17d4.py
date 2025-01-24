@@ -1,24 +1,115 @@
-# # ## Classes
-class Animal:
-    def __init__(self, sound, name):
+# ## Classes
+from pydantic import BaseModel
+
+class Animal(BaseModel):
+    sound: str
+    name: str
+
+
+class WorldlyEntity:
+    def __init__(self, name, sound):
         self.sound = sound
         self.name = name
 
-    def some_func(self):
-        print("some method on dogs")
-        return "not none"
+#     def animal_method(self):
+#         print(self)
+#         return "not none"
+
+# class User(db.Model):
+#     username = db.Column(db.String())
 
 
-class Dog(Animal):
-    def __init__(self, name):
-        self.sound = "woof"
+class Animal:
+    def __init__(self, name, sound, password):
+        self.sound = sound
         self.name = name
+        self._hashedPassword = password
 
-    def some_func(self):
-        print("some method on dogs")
-        return "not none"
+    def animal_method(self):
+        print(self)
+
+    @property
+    def password(self):
+        is_user = True # logic to see if it's a user
+        if is_user is False:
+            return "too bad you can't GET it 🙂"
+        else:
+            return self._hashedPassword
 
 
+    @password.setter
+    def password(self, password):
+        print("Running setter hash algorithms")
+        self._hashedPassword = password
+
+
+woofer = Animal("woofer", "woof", "goodpass")
+
+print("before: ", woofer.password)
+woofer.password = "new pass"
+print("after: ", woofer.password)
+
+
+
+
+# woofer.password = "new pass"
+
+
+# print(woofer.password)
+
+
+
+
+
+
+
+
+# woofer.name = "NOT WOOFER"
+# woofer.animal_name = "NOT WOOFER"
+# print("\n", woofer.animal_name)
+
+# def hello_world():
+#     print("Hello world!")
+
+# def goodbye():
+#     print("goodbye")
+
+def wrapper_func(login_a_user):
+    def validate_user():
+        print("did I run?")
+        ## validation logic
+        try:
+            pass # validation logic
+            login_a_user()
+        except: # ValidationError(e)
+            return "you're a hacker"
+        finally:
+            pass # @redirect home
+
+        print("did I also run?")
+    return validate_user
+
+@wrapper_func
+def log_in():
+    print("hey I'm an easy func")
+
+@wrapper_func
+def some_other():
+    print("all the time?")
+
+# easy_func()
+
+# some_variable = wrapper_func(hello_world)
+# another_variable = wrapper_func(goodbye)
+
+# some_variable()
+
+# another_variable()
+
+
+
+# fido = Dog("fido")
+# print(fido.name, fido.sound, fido.hello)
 
 
 # # class AnimalMixin:
