@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>{{info.title}}</title>
+    </head>
+
+    <body>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/test/form">Form</a>
+        </nav>
+        <h1>{{info.heading}}</h1>
+        {% if form %}
+        <h2>Should only render when we have a form</h2>
+        <form action="" method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <!-- {{ form.csrf_token }} -->
+            <p>{{ form.name.label }} {{ form.name() }}</p>
+            <p>{{ form.age.label }} {{ form.age() }}</p>
+            <p>{{ form.submit() }}</p>
+        </form>
+        {%endif%}
+    </body>
+</html>

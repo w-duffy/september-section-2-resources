@@ -1,0 +1,17 @@
+<h1>Create a New Tweet!</h1>
+<form method="post" class="tweet" novalidate>
+    {{ form.csrf_token }} 
+    
+    {% if author %}
+    <p style="color: red">{{ author[0] }}</p>
+    {% endif %}
+    
+    <div>{{form.author.label}} {{form.author()}}</div>
+    
+    {% if tweet %}
+    <p style="color: red">{{ tweet[0] }}</p>
+    {% endif %}
+    
+    <div>{{form.tweet.label}} {{form.tweet()}}</div>
+    <div>{{form.submit()}}</div>
+</form>
