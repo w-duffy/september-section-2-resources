@@ -85,6 +85,6 @@ else:
 
 ```
 
-## Now you should be able to run:
+Now you should be able to run:
 
-pipenv run alembic upgrade head
+- `pipenv run alembic upgrade head`
