@@ -1,10 +1,11 @@
 # Migrations With Alembic Reading (HW)
 
-If you follow along with this reading, you'll hit an error when it's time to run
+If you follow along with this reading, you'll hit an error when it's time to run:
 
-```
+```bash
 pipenv run alembic upgrade head
 ```
+
 
 ## Follow the below as a workaround:
 
@@ -83,5 +84,7 @@ else:
     run_migrations_online()
 
 ```
-- updated the below line of code in your alembic.ini to match this:
-`sqlalchemy.url = ""`
+
+## Now you should be able to run:
+
+pipenv run alembic upgrade head
