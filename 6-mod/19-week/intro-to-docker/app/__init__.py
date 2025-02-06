@@ -9,3 +9,7 @@ def hello():
 @app.route("/hello")
 def hi():
     return "Hello cool!"
+
+@app.route("/api/reviews")
+def get_reviews():
+    return {"Reviews": [{"id": 1, "rev": "some rev"}]}
