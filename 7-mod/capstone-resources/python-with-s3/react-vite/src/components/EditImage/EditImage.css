@@ -1,0 +1,96 @@
+.edit-image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.edit-image-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-image-content h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.current-image {
+  margin-bottom: 1.5rem;
+}
+
+.current-image img {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.file-input {
+  margin-bottom: 1.5rem;
+}
+
+.file-input input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.submit-button,
+.cancel-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.submit-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.cancel-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #da190b;
+}
+
+.submit-button:disabled,
+.cancel-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #f44336;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: #ffebee;
+  border-radius: 4px;
+} 

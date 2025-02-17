@@ -1,0 +1,63 @@
+.image-detail-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.image-wrapper {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.edit-button,
+.delete-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  transform: translateY(-1px);
+}
+
+.edit-button:active,
+.delete-button:active {
+  transform: translateY(0);
+}
+
+.edit-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #45a049;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #da190b;
+} 

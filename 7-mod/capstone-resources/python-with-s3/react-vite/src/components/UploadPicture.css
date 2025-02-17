@@ -1,0 +1,106 @@
+/* UploadPicture.css */
+
+/* Container Styling */
+.upload-section {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 2rem auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+.upload-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Message Styling */
+.upload-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 2rem;
+}
+
+/* Form Styling */
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Form Group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label Styling */
+.form-label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Input Styling */
+.form-input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Input Focus State */
+.form-input:focus {
+  border-color: #007BFF;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button Styling */
+.upload-button {
+  padding: 0.75rem;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button Hover State */
+.upload-button:hover {
+  background-color: #0056b3;
+}
+
+/* Button Disabled State */
+.upload-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .upload-section {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .upload-title {
+    font-size: 1.5rem;
+  }
+
+  .form-input {
+    font-size: 0.9rem;
+  }
+
+  .upload-button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}

@@ -1,0 +1,13 @@
+.env
+__pycache__/
+*.py[cod]
+.venv
+.DS_Store
+.vscode/
+__pycache__
+# comment these out if you're using dev containers or GH actions
+.github
+.docker
+.devcontainer
+README.CONTAINER.md
+instance

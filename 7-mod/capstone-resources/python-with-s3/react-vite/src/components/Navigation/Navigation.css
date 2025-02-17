@@ -1,0 +1,109 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navigation Bar Styling */
+.navigation {
+  background-color: #2c3e50;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo Styling */
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ecf0f1;
+}
+
+.logo a:hover {
+  color: #bdc3c7;
+}
+
+/* Navigation Links Styling */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  font-size: 1rem;
+  color: #ecf0f1;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #34495e;
+}
+
+.nav-links li a.active {
+  background-color: #16a085;
+}
+
+/* Profile Section Styling */
+.profile-section {
+  position: relative;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide navigation links on small screens */
+  }
+
+  /* You can add a hamburger menu here for mobile navigation */
+}
+
+
+.mobile-menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  color: #ecf0f1;
+  cursor: pointer;
+}
+
+/* Show Hamburger Menu on Small Screens */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px; /* Adjust based on your navigation height */
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: #2c3e50;
+    flex-direction: column;
+    align-items: center;
+    transition: left 0.3s ease;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+}
