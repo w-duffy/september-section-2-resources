@@ -65,7 +65,7 @@ Taking care of our mental health is an important aspect of our life. Please make
 Students plagiarising another student's source code will be dismissed. This is an assessment to utilize the knowledge gained from the previous modules to build what you have learned.
 
 ## Camera Etiquacy
-Students **MUST** have their cameras on anytime they're interacting with staff or students in Module 7, including during the Career Quest. Students who have their cameras off, are AFK/not present, or do not show their full face in the camera view, will receive a **strike**.
+Students **MUST** have their cameras on anytime they're interacting with staff or students in Module 7, including during the Career Quest.
 
 ## Some Useful Development Links
 
@@ -86,7 +86,7 @@ Students **MUST** have their cameras on anytime they're interacting with staff o
 # Phase 1 - Project Approval
 
 ## Capstone Project Proposals
-You must submit a Project proposal and get approval from an Instructor before implementing the features. The deadline for all project proposals will have to be submitted by the **end of day** on Wednesday 2/19/25.
+You must submit a Project proposal and get approval from an Instructor before implementing the features. The deadline for all project proposals will have to be submitted by the **end of day** on Thursday 2/20/25.
 
 If you're currently waiting for an Instructor to review your project proposal, please utilize the time appropriately and continue to be productive *(initialize your project + deploy skeleton starter, set up your GitHub repo, project kanban board, etc.)*.
 
